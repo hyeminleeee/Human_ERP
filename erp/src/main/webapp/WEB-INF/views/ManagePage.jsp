@@ -57,7 +57,7 @@
             font-size: 14px;
         }
 
-        .navbar .contact a {
+        .navbar .contact .plus {
             background-color: #0080FF;
             color: white;
             padding: 8px 12px;
@@ -67,7 +67,7 @@
             font-weight: bold;
         }
 
-        .navbar .contact a:hover {
+        .navbar .contact .plus:hover {
             background-color: darkred;
         }
 
@@ -89,6 +89,14 @@
             color: #666;
             margin-bottom: 20px;
         }
+        .logout {
+        	color: gray;
+        	font-size: 10px;
+        }
+        
+        .logout:hover {
+        	font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -103,13 +111,14 @@
             <a href="#about">품질부</a>
         </div>
         <div class="contact">
-            <a href="#sales">사원추가</a>
+            <a href="#sales" class="plus">사원추가</a>
+            <a href=# class="logout">로그아웃</a>
         </div>
     </div>
 
     <!-- 배경 이미지와 텍스트 섹션 -->
     <div class="hero-section">
-        <h1>LHMS 인사관리 페이지</h1>
+        <h1>LHMC 인사관리 페이지</h1>
         <p>사원 추가 및 관리 페이지</p>
     </div>
 </body>

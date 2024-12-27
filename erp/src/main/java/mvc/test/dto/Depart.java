@@ -1,0 +1,16 @@
+package mvc.test.dto;
+
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Depart {
+	private int deptNo;
+	private String deptName;
+	List<Employee> empList;
+}

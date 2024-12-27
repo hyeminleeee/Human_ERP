@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+	<insert id="insertEmployee">
+		insert into emp values(#{empNo}, #{empName}, #{empBirthday}, #{empAddress}, 
+			#{empPhone}, #{empImage}, #{depNum}, #{empHiredate}, #{empPosition}, #{empId}, 
+			#{empPasswd}, #{empEmail})
+	</insert>
+	
+	<update id="updateEmployee">
+		update emp set emp_Name=#{empName}, emp_Birthday=#{empBirthday}, emp_Address=#{empAddress}, 
+			emp_Phone=#{empPhone}, dep_Num=#{depNum}, emp_Position=#{empPosition}, emp_Email=#{empEmail}
+			<if test="empImage != null and empImage != ''">
+				, emp_Image=#{empImage} 
+			</if>
+			where emp_No=#{empNo}
+	</update>
+	
+	<delete id="deleteEmployee">
+		delete from emp where emp_no=#{empNo}
+	</delete>
+</mapper>

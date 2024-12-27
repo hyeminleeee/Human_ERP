@@ -23,6 +23,11 @@
 	
 	<context:component-scan base-package="mvc.test.app" />
 	
+	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<beans:property name="order" value="1"/>
+	</beans:bean>
 	
+	<context:component-scan base-package="mvc.test.controller" />
+	<!-- <context:component-scan base-package="mvc.test.service" /> -->	
 	
 </beans:beans>
